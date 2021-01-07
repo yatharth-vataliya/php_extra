@@ -4,7 +4,7 @@ use Exception;
 class Config{
 
   private static $cipher = "aes-256-cbc";
-  private static $key = "KOMAL&YATHARTH";
+  private static $key = "YATHARTH";
 
   public static function generateConfigFile(){
 
