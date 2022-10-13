@@ -39,9 +39,8 @@ FILE;
   public static function destroyConfigFile(){
     if(unlink(__DIR__.'/ConfigData.php')){
       return true;
-    }else{
-      return false;
     }
+    return false;
   }
 
 }
