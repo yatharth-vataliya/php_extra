@@ -36,6 +36,6 @@ echo $blogData->name;
 
 echo "<br/>".PHP_EOL;
 
-$blogData->name = "Kalpana"; // Here you can see we can assing new value to readonly variables object key. so we can say that readonly variable is only one time initialization. It the variable is object of other class then property of object is mutable and the varible that we define as readonly is only immutable;
+$blogData->name = "Kalpana"; // Here you can see we can assing new value to readonly variables object key. so we can say that readonly variable is only one time initialization. If the variable is object of other class then property of object is mutable and the variable that we define as readonly is only immutable;
 
 echo $blogData->name;
