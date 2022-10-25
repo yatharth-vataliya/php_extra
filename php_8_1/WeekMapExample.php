@@ -13,7 +13,8 @@ class Solar
         echo self::class . " is executed \n";
     }
 
-    public function __destruct(){
+    public function __destruct()
+    {
         echo "Dead \n";
     }
 
@@ -39,7 +40,7 @@ unset($solar2);*/
 $solarx = new Solar();
 $weekMap = new WeakMap();
 
-$weekMap[$solarx] = [ 'this is solarx array first element', 'this is solarx second element'];
+$weekMap[$solarx] = ['this is solarx array first element', 'this is solarx second element'];
 
 var_dump($weekMap); // this will dump entire WeekMap instance.
 unset($solarx);
