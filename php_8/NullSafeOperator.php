@@ -3,7 +3,7 @@
 // PHP version 7.x
 
 $country =  null;
-
+$session = null;
 if ($session !== null) {
   $user = $session->user;
 
