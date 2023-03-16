@@ -6,6 +6,8 @@ return header('location:js_send.php'); // but if we add the return statement wit
 
 exit; // manually exit the script
 
+header('location: js_send.php'); // this will redirect to js_send.php but execute remaining script, we can stop execution by return keyword before header function or manually cally exit or die function of php
+
 $handle = fopen('demo.txt','a+');
 
 fwrite($handle, 'nothing');
