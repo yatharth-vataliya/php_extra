@@ -14,4 +14,6 @@ fwrite($handle, 'nothing');
 
 fclose($handle);
 
+header('location:mongodb.php'); // if script is not terminated manually then this header redirection will execute and all the code below this will execute as it is
+
 ?>
