@@ -1,6 +1,7 @@
 <?php
 
 #PHP < 8.1
+
 function countAndIterate(Iterator $value): void
 {
     if (!($value instanceof Countable)) {
@@ -15,6 +16,7 @@ function countAndIterate(Iterator $value): void
 }
 
 #PHP 8.1
+
 function countAndIterate2(Iterator&Countable $value): void
 {
     foreach ($value as $val) {
