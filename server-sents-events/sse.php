@@ -6,7 +6,7 @@ $counter = rand(1, 10); // a random counter
 while (1) {
 // 1 is always true, so repeat the while loop forever (aka event-loop)
 
-  $curDate = date(DATE_ISO8601);
+  $curDate = date('d-m-Y H:i:s');
   echo "event: ping\n",
        'data: {"time": "' . $curDate . '"}', "\n\n";
 
