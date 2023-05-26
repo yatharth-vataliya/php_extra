@@ -2,6 +2,10 @@
 date_default_timezone_set("America/New_York");
 header("Content-Type: text/event-stream");
 
+// ---- changes based on chatGPT ----
+header("Cache-Control: no-cache");
+// header("Connection: keep-alive");
+// ---- end chatGPT ----
 $counter = rand(1, 10); // a random counter
 while (1) {
 // 1 is always true, so repeat the while loop forever (aka event-loop)
