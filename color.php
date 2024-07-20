@@ -1,10 +1,13 @@
 <?php
 
-class Colors {
-    private $foreground_colors = array();
-    private $background_colors = array();
+class Colors
+{
+    private $foreground_colors = [];
 
-    public function __construct() {
+    private $background_colors = [];
+
+    public function __construct()
+    {
         // Set up shell colors
         $this->foreground_colors['black'] = '0;30';
         $this->foreground_colors['dark_gray'] = '1;30';
@@ -34,31 +37,34 @@ class Colors {
     }
 
     // Returns colored string
-    public function getColoredString($string, $foreground_color = null, $background_color = null) {
-        $colored_string = "";
+    public function getColoredString($string, $foreground_color = null, $background_color = null)
+    {
+        $colored_string = '';
 
         // Check if given foreground color found
         if (isset($this->foreground_colors[$foreground_color])) {
-            $colored_string .= "\033[" . $this->foreground_colors[$foreground_color] . "m";
+            $colored_string .= "\033[".$this->foreground_colors[$foreground_color].'m';
         }
         // Check if given background color found
         if (isset($this->background_colors[$background_color])) {
-            $colored_string .= "\033[" . $this->background_colors[$background_color] . "m";
+            $colored_string .= "\033[".$this->background_colors[$background_color].'m';
         }
 
         // Add string and end coloring
-        $colored_string .=  $string . "\033[0m";
+        $colored_string .= $string."\033[0m";
 
         return $colored_string;
     }
 
     // Returns all foreground color names
-    public function getForegroundColors() {
+    public function getForegroundColors()
+    {
         return array_keys($this->foreground_colors);
     }
 
     // Returns all background color names
-    public function getBackgroundColors() {
+    public function getBackgroundColors()
+    {
         return array_keys($this->background_colors);
     }
 }
@@ -67,12 +73,12 @@ class Colors {
 $colors = new Colors();
 
 // Test some basic printing with Colors class
-echo $colors->getColoredString("Testing Colors class, this is purple string on yellow background.", "purple", "yellow") . "\n";
-echo $colors->getColoredString("Testing Colors class, this is blue string on light gray background.", "blue", "light_gray") . "\n";
-echo $colors->getColoredString("Testing Colors class, this is red string on black background.", "red", "black") . "\n";
-echo $colors->getColoredString("Testing Colors class, this is cyan string on green background.", "cyan", "green") . "\n";
-echo $colors->getColoredString("Testing Colors class, this is cyan string on default background.", "cyan") . "\n";
-echo $colors->getColoredString("Testing Colors class, this is default string on cyan background.", null, "cyan") . "\n";
+echo $colors->getColoredString('Testing Colors class, this is purple string on yellow background.', 'purple', 'yellow')."\n";
+echo $colors->getColoredString('Testing Colors class, this is blue string on light gray background.', 'blue', 'light_gray')."\n";
+echo $colors->getColoredString('Testing Colors class, this is red string on black background.', 'red', 'black')."\n";
+echo $colors->getColoredString('Testing Colors class, this is cyan string on green background.', 'cyan', 'green')."\n";
+echo $colors->getColoredString('Testing Colors class, this is cyan string on default background.', 'cyan')."\n";
+echo $colors->getColoredString('Testing Colors class, this is default string on cyan background.', null, 'cyan')."\n";
 
 // Create new Colors class
 $colors = new Colors();
@@ -85,9 +91,9 @@ $bgs = $colors->getBackgroundColors();
 // Loop through all foreground and background colors
 $count = count($fgs);
 for ($i = 0; $i < $count; $i++) {
-    echo $colors->getColoredString("Test Foreground colors", $fgs[$i]) . "\t";
+    echo $colors->getColoredString('Test Foreground colors', $fgs[$i])."\t";
     if (isset($bgs[$i])) {
-        echo $colors->getColoredString("Test Background colors", null, $bgs[$i]);
+        echo $colors->getColoredString('Test Background colors', null, $bgs[$i]);
     }
     echo "\n";
 }
@@ -96,16 +102,16 @@ echo "\n";
 // Loop through all foreground and background colors
 foreach ($fgs as $fg) {
     foreach ($bgs as $bg) {
-        echo $colors->getColoredString("Test Colors", $fg, $bg) . "\t";
+        echo $colors->getColoredString('Test Colors', $fg, $bg)."\t";
     }
     echo "\n";
 }
 
-
-if(function_exists('ncurses_has_colors')){
-    var_dump(ncurses_has_colors());
+if (function_exists('ncurses_has_colors')) {
+    echo 'if ncurses_has_color';
+    var_dump(\ncurses_has_colors());
 } // not valid
 
-printf ('\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'); // not valid
-fwrite(STDOUT,'\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'); // not valid
-?>
+printf('\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'); // not valid
+fwrite(STDOUT, '\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'); // not valid
+
