@@ -1,10 +1,10 @@
 <?php
 
-#PHP < 8.1
+//PHP < 8.1
 
 function countAndIterate(Iterator $value): void
 {
-    if (!($value instanceof Countable)) {
+    if (! ($value instanceof Countable)) {
         throw new TypeError('value must be Countable');
     }
 
@@ -12,10 +12,10 @@ function countAndIterate(Iterator $value): void
         echo $val;
     }
 
-   echo count($value);
+    echo count($value);
 }
 
-#PHP 8.1
+//PHP 8.1
 
 function countAndIterate2(Iterator&Countable $value): void
 {
@@ -25,3 +25,4 @@ function countAndIterate2(Iterator&Countable $value): void
 
     echo count($value);
 }
+
