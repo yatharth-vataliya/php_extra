@@ -90,15 +90,23 @@ class P84Locale2
     public function __construct(
         public string $languageCode,
         public string $countryCode {
-            set (string $countryCode) {
+            /* set (string $countryCode) {
                 $this->countryCode = strtoupper($countryCode);
+            }*/
+
+            // short form of set
+            // set => strtoupper($value);
+
+            // or we can use this form also
+            set {
+                $this->countryCode = strtoupper(($value));
             }
 
             /* get {
                 return $this->countryCode . 'some_value';
             } */
 
-            // short form
+            // short form of get
             get => $this->countryCode . ' some_Value';
         }
     )
