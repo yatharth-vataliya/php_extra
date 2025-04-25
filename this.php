@@ -6,8 +6,8 @@ class DemoClass
 
     public string $city = 'kalavad';
 
-    public int $contact = 8758721807;
-    // public integer $contact = 8758721807;  // this will through error so write int instead of integer because as php compiler integer have no default initilization but int have;
+    public int $contact = 9876543211;
+    // public integer $contact = 9876543211;  // this will through error so write int instead of integer because as php compiler integer have no default initilization but int have;
 
     public function display(): string
     {
