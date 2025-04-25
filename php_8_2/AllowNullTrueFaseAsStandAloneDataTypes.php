@@ -1,6 +1,6 @@
 <?php
 
-# PHP < 8.2
+// PHP < 8.2
 
 class Falsy
 {
@@ -14,13 +14,13 @@ class Falsy
         return true;
     }
 
-    public function almostNull(): string|null
+    public function almostNull(): ?string
     {
         return null;
     }
 }
 
-# PHP 8.2
+// PHP 8.2
 
 class Falsy1
 {
@@ -28,6 +28,7 @@ class Falsy1
     {
         return false;
     }
+
     public function alwaysTrue(): true
     {
         return true;
@@ -39,4 +40,4 @@ class Falsy1
     }
 }
 
-echo ((new Falsy1)->alwaysFalse());
+echo (new Falsy1)->alwaysFalse();

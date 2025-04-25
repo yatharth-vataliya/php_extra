@@ -9,12 +9,12 @@ class NullLogger implements MainLogger
 {
     public function __construct()
     {
-        echo __CLASS__ . "<br/>" . PHP_EOL;
+        echo __CLASS__.'<br/>'.PHP_EOL;
     }
 
     public function logIt()
     {
-        echo "Logger class is " . __CLASS__ . " " . PHP_EOL;
+        echo 'Logger class is '.__CLASS__.' '.PHP_EOL;
     }
 }
 
@@ -22,12 +22,12 @@ class Logger implements MainLogger
 {
     public function __construct()
     {
-        echo __CLASS__ . "<br/>" . PHP_EOL;
+        echo __CLASS__.'<br/>'.PHP_EOL;
     }
 
     public function logIt()
     {
-        echo "Logger class is " . __CLASS__ . " " . PHP_EOL;
+        echo 'Logger class is '.__CLASS__.' '.PHP_EOL;
     }
 }
 
@@ -37,7 +37,7 @@ class Service
 
     // Objects can now be used as default parameter values, static variables, and global constants, as well as in attribute arguments.
 
-    public function __construct(MainLogger $logger = new NullLogger()) // new feature of PHP8.1. We can init default parameter using object or like new Class like syntax;
+    public function __construct(MainLogger $logger = new NullLogger) // new feature of PHP8.1. We can init default parameter using object or like new Class like syntax;
     {
         $this->logger = $logger;
     }
@@ -48,7 +48,7 @@ class Service
     }
 }
 
-$service = new Service(); // this is also valid
+$service = new Service; // this is also valid
 
 $service = new Service(new Logger); // this is also valid
 

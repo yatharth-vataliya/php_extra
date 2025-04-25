@@ -4,10 +4,13 @@
 
 require_once 'vendor/autoload.php';
 
-use Crypto\{Config,ConfigData,Encrypt,Decrypt};
+use Crypto\Config;
+use Crypto\Decrypt;
+use Crypto\Encrypt;
+
 // var_dump(Config::generateConfigFile());
 
-$cipher_text = Encrypt::encryptData('Live your life today there is no tomorrow','yatharth');
+$cipher_text = Encrypt::encryptData('Live your life today there is no tomorrow', 'yatharth');
 echo $cipher_text;
 
-echo Decrypt::decryptData($cipher_text,'yatharth');
+echo Decrypt::decryptData($cipher_text, 'yatharth');

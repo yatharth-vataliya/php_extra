@@ -11,7 +11,7 @@ switch (8.0) {
         break;
 }
 echo $result;
-//> Oh no!
+// > Oh no!
 
 // as PHP version 8
 
@@ -28,4 +28,3 @@ echo match (8.0) {
     8.0 => 'This is what I expected',
     default => 'This is default case in case no case is found',
 };
-

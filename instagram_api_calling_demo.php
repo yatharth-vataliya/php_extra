@@ -1,12 +1,12 @@
 <?php
-if (!empty($_GET['location'])) {
+if (! empty($_GET['location'])) {
     /**
      * Here we build the url we'll be using to access the google maps api
      */
-    $maps_url = 'https://' .
-        'maps.googleapis.com/' .
-        'maps/api/geocode/json' .
-        '?address=' . urlencode($_GET['location']);
+    $maps_url = 'https://'.
+        'maps.googleapis.com/'.
+        'maps/api/geocode/json'.
+        '?address='.urlencode($_GET['location']);
     $maps_json = file_get_contents($maps_url);
     $maps_array = json_decode($maps_json, true);
     $lat = $maps_array['results'][0]['geometry']['location']['lat'];
@@ -15,13 +15,13 @@ if (!empty($_GET['location'])) {
      * Time to make our Instagram api request. We'll build the url using the
      * coordinate values returned by the google maps api
      */
-    $lat=20.5937;
-    $lan=78.9629;
-    $url = 'https://' .
-        'api.instagram.com/v1/media/search' .
-        '?lat=' . $lat .
-        '&lng=' . $lan .
-        '&client_id=a12e2cc62e4a434ab11ad4c0bea81200'; //replace "CLIENT-ID"
+    $lat = 20.5937;
+    $lan = 78.9629;
+    $url = 'https://'.
+        'api.instagram.com/v1/media/search'.
+        '?lat='.$lat.
+        '&lng='.$lan.
+        '&client_id=a12e2cc62e4a434ab11ad4c0bea81200'; // replace "CLIENT-ID"
     $json = file_get_contents($url);
     $array = json_decode($json, true);
 }
@@ -40,14 +40,16 @@ if (!empty($_GET['location'])) {
     <button type="submit">Submit</button>
 </form>
 <br/>
-<div id="results" data-url="<?php if (!empty($url)) echo $url ?>">
+<div id="results" data-url="<?php if (! empty($url)) {
+    echo $url;
+} ?>">
     <?php
-    if (!empty($array)) {
+    if (! empty($array)) {
         foreach ($array['data'] as $key => $item) {
-            echo '<img id="' . $item['id'] . '" src="' . $item['images']['low_resolution']['url'] . '" alt=""/><br/>';
+            echo '<img id="'.$item['id'].'" src="'.$item['images']['low_resolution']['url'].'" alt=""/><br/>';
         }
     }
-    ?>
+?>
 </div>
 </body>
 </html>

@@ -1,41 +1,37 @@
 <?php
 
 [
-	'name' => 'yatharth',
-	'sir name' => 'vataliya',
-	'last name' => 'narendrabhai',
+    'name' => 'yatharth',
+    'sir name' => 'vataliya',
+    'last name' => 'narendrabhai',
 ]; // this will work properly :)
 
-
-$array[0]='hello';
+$array[0] = 'hello';
 var_dump($array);
 // $array[0]['one']='One'; // this is not valid throw error and terminate the script;
 // var_dump($array);
-$arr=array();
-$arr="string"; // it will convert array object to string object;
+$arr = [];
+$arr = 'string'; // it will convert array object to string object;
 var_dump($arr); // this will work properly;
 
-$plus=['name'=>'yatharth','city'=>'kalavad'];
+$plus = ['name' => 'yatharth', 'city' => 'kalavad'];
 
-$plus=['mobile'=>8758721807]; // this statement will reinitialize the the array with key: mobile and value: 8758721807;
+$plus = ['mobile' => 8758721807]; // this statement will reinitialize the the array with key: mobile and value: 8758721807;
 
-$plus=$plus+['study'=>'mscit']; // but this will add element as key and value in the existing array;
+$plus = $plus + ['study' => 'mscit']; // but this will add element as key and value in the existing array;
 
-$plus+=['rollno'=>20]; // this will same as above line
+$plus += ['rollno' => 20]; // this will same as above line
 
-$plus[]="hello"; // this will add hello as its element;
+$plus[] = 'hello'; // this will add hello as its element;
 
-$plus[]=['bike'=>'nothing']; // this will create new array pointing to existing key or you can say it will create multidimensional array;
+$plus[] = ['bike' => 'nothing']; // this will create new array pointing to existing key or you can say it will create multidimensional array;
 
-$plus[]=array('class'=>'f2'); // this will create new array pointing to existing key or you can say it will create multidimensional array;
+$plus[] = ['class' => 'f2']; // this will create new array pointing to existing key or you can say it will create multidimensional array;
 
 var_dump($plus);
 
-echo "<br/><br/><br/>";
+echo '<br/><br/><br/>';
 
-$var=Array('hello','this','is','array','usring','Array');
+$var = ['hello', 'this', 'is', 'array', 'usring', 'Array'];
 
 var_dump($var);
-
-
-?>

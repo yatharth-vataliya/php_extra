@@ -3,7 +3,8 @@
 // Before PHP 8.3
 
 // Returns a random float between $min and $max, both including.
-function getFloat(float $min, float $max) {
+function getFloat(float $min, float $max)
+{
     // This algorithm is biased for specific inputs and may
     // return values outside the given range. This is impossible
     // to work around in userland.
@@ -21,7 +22,7 @@ $myBoolean = getFloat(0, 1) < $chanceForTrue;
 
 // IN PHP 8.3
 
-$randomizer = new \Random\Randomizer();
+$randomizer = new \Random\Randomizer;
 
 $temperature = $randomizer->getFloat(
     -89.2,

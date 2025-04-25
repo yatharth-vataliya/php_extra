@@ -29,8 +29,7 @@ class Point
         public float $x = 1.0,
         public float $y = 2.0,
         public float $z = 3.0
-    ) {
-    }
+    ) {}
 
     public function __toString(): string
     {
@@ -38,12 +37,11 @@ class Point
     }
 }
 
-
-$p = new Point();
+$p = new Point;
 
 echo $p;
 
-echo "<br/>";
+echo '<br/>';
 
 echo PHP_EOL;
 

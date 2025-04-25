@@ -70,7 +70,7 @@ class Colors
 }
 
 // Create new Colors class
-$colors = new Colors();
+$colors = new Colors;
 
 // Test some basic printing with Colors class
 echo $colors->getColoredString('Testing Colors class, this is purple string on yellow background.', 'purple', 'yellow')."\n";
@@ -81,7 +81,7 @@ echo $colors->getColoredString('Testing Colors class, this is cyan string on def
 echo $colors->getColoredString('Testing Colors class, this is default string on cyan background.', null, 'cyan')."\n";
 
 // Create new Colors class
-$colors = new Colors();
+$colors = new Colors;
 
 // Get Foreground Colors
 $fgs = $colors->getForegroundColors();
@@ -114,4 +114,3 @@ if (function_exists('ncurses_has_colors')) {
 
 printf('\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'); // not valid
 fwrite(STDOUT, '\e]8;;http://example.com\e\\This is a link\e]8;;\e\\\n'); // not valid
-

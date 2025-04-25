@@ -3,7 +3,8 @@
 // Before PHP 8.3
 
 // This function needs to be manually implemented.
-function getBytesFromString(string $string, int $length) {
+function getBytesFromString(string $string, int $length)
+{
     $stringLength = strlen($string);
 
     $result = '';
@@ -16,7 +17,7 @@ function getBytesFromString(string $string, int $length) {
 }
 
 $randomDomain = sprintf(
-    "%s.example.com",
+    '%s.example.com',
     getBytesFromString(
         'abcdefghijklmnopqrstuvwxyz0123456789',
         16,
@@ -29,10 +30,10 @@ echo $randomDomain;
 
 // A \Random\Engine may be passed for seeding,
 // the default is the secure engine.
-$randomizer = new \Random\Randomizer();
+$randomizer = new \Random\Randomizer;
 
 $randomDomain = sprintf(
-    "%s.example.com",
+    '%s.example.com',
     $randomizer->getBytesFromString(
         'abcdefghijklmnopqrstuvwxyz0123456789',
         16,

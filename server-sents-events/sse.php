@@ -1,41 +1,44 @@
 <?php
-date_default_timezone_set("America/New_York");
-header("Content-Type: text/event-stream");
+
+date_default_timezone_set('America/New_York');
+header('Content-Type: text/event-stream');
 
 // ---- changes based on chatGPT ----
-header("Cache-Control: no-cache");
+header('Cache-Control: no-cache');
 // header("Connection: keep-alive");
 // ---- end chatGPT ----
 $counter = rand(1, 10); // a random counter
 while (1) {
-// 1 is always true, so repeat the while loop forever (aka event-loop)
+    // 1 is always true, so repeat the while loop forever (aka event-loop)
 
-  $curDate = date('d-m-Y H:i:s');
-  echo "event: ping\n",
-       'data: {"time": "' . $curDate . '"}', "\n\n";
+    $curDate = date('d-m-Y H:i:s');
+    echo "event: ping\n",
+    'data: {"time": "'.$curDate.'"}', "\n\n";
 
-  // Send a simple message at random intervals.
+    // Send a simple message at random intervals.
 
-  $counter--;
+    $counter--;
 
-  if (!$counter) {
-    echo 'data: This is a message at time ' . $curDate, "\n\n";
-    $counter = rand(1, 10); // reset random counter
-  }
+    if (! $counter) {
+        echo 'data: This is a message at time '.$curDate, "\n\n";
+        $counter = rand(1, 10); // reset random counter
+    }
 
-  // flush the output buffer and send echoed messages to the browser
+    // flush the output buffer and send echoed messages to the browser
 
-  while (ob_get_level() > 0) {
-    ob_end_flush();
-  }
-  flush();
+    while (ob_get_level() > 0) {
+        ob_end_flush();
+    }
+    flush();
 
-  // break the loop if the client aborted the connection (closed the page)
-  
-  if ( connection_aborted() ) break;
+    // break the loop if the client aborted the connection (closed the page)
 
-  // sleep for 1 second before running the loop again
-  
-  sleep(1);
+    if (connection_aborted()) {
+        break;
+    }
+
+    // sleep for 1 second before running the loop again
+
+    sleep(1);
 
 }

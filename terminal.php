@@ -12,5 +12,5 @@ while (true) {
 
     // Execute the command and display the output
     $output = shell_exec($input);
-    echo $output . PHP_EOL;
+    echo $output.PHP_EOL;
 }

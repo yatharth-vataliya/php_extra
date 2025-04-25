@@ -1,4 +1,5 @@
 <?php
+
 // echo "Are you sure you want to do this?  Type 'yes' to continue: ";
 // $handle = STDIN;
 // $line = fgets($handle);
@@ -33,8 +34,3 @@
 // settype($typetest, '');
 // echo PHP_EOL;
 // echo gettype($typetest);
-
-
-
-
-?>

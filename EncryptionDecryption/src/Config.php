@@ -1,24 +1,28 @@
 <?php
+
 namespace Crypto;
+
 use Exception;
-class Config{
 
-  private static $cipher = "aes-256-cbc";
-  private static $key = "YATHARTH";
+class Config
+{
+    private static $cipher = 'aes-256-cbc';
 
-  public static function generateConfigFile(){
+    private static $key = 'YATHARTH';
 
-    if (in_array(self::$cipher, openssl_get_cipher_methods()))
+    public static function generateConfigFile()
     {
-      $ivlen = openssl_cipher_iv_length(self::$cipher);
-      $iv = openssl_random_pseudo_bytes($ivlen);
-    }else{
-      throw new Exception("No valid cipher is given");
-    }
-    $cipher = self::$cipher;
-    $key = self::$key;
-    $iv = addslashes($iv);
-    $config_file = <<<FILE
+
+        if (in_array(self::$cipher, openssl_get_cipher_methods())) {
+            $ivlen = openssl_cipher_iv_length(self::$cipher);
+            $iv = openssl_random_pseudo_bytes($ivlen);
+        } else {
+            throw new Exception('No valid cipher is given');
+        }
+        $cipher = self::$cipher;
+        $key = self::$key;
+        $iv = addslashes($iv);
+        $config_file = <<<FILE
 <?php
 namespace Crypto;
     class ConfigData{
@@ -28,19 +32,20 @@ namespace Crypto;
     }
 FILE;
 
-    $file = fopen(__DIR__.'/ConfigData.php','w+');
-    fwrite($file,$config_file);
-    fclose($file);
+        $file = fopen(__DIR__.'/ConfigData.php', 'w+');
+        fwrite($file, $config_file);
+        fclose($file);
 
-    return true;
+        return true;
 
-  }
-
-  public static function destroyConfigFile(){
-    if(unlink(__DIR__.'/ConfigData.php')){
-      return true;
     }
-    return false;
-  }
 
+    public static function destroyConfigFile()
+    {
+        if (unlink(__DIR__.'/ConfigData.php')) {
+            return true;
+        }
+
+        return false;
+    }
 }

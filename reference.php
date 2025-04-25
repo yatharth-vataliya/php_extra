@@ -1,12 +1,12 @@
-<?php 
+<?php
 
-$_REQ =&$_SERVER["REQUEST_METHOD"];
-($_REQ=='POST')and($what='it`s a POST');
-($_REQ=='GET')and($what='it`s a GET');
-isset($what) and print($what);
-$_REQ="nothing is here ";
+$_REQ = &$_SERVER['REQUEST_METHOD'];
+($_REQ == 'POST') and ($what = 'it`s a POST');
+($_REQ == 'GET') and ($what = 'it`s a GET');
+isset($what) and print $what;
+$_REQ = 'nothing is here ';
 var_dump($_REQ);
-var_dump($_SERVER["REQUEST_METHOD"]);
+var_dump($_SERVER['REQUEST_METHOD']);
 
 /*$numWidgets = 10;
 
@@ -25,9 +25,9 @@ echo "$numWidgetsRef = $numWidgetsRef<br>";  // Displays "9"
 
 public $name="hello";
 public function &display(){
-	echo "display is called ";
-	global $name;
-	return $name;
+    echo "display is called ";
+    global $name;
+    return $name;
 }
 
 }
@@ -38,7 +38,6 @@ $name=$display->display();
 // echo $display->name;
 var_dump($name);
 */
-
 
 /*function doIt ($fn) {
   echo "doIt\n";
@@ -64,7 +63,6 @@ echo "<pre>";
 print_r( $bands );
 echo "</pre>";*/
 
-
 /*function func1(){
     echo 'echo1 ';
     return 'return1';
@@ -77,5 +75,3 @@ function func2($func){
 func2('func1');
 */
 // http_response_code(404);
-
- ?>

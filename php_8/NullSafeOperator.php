@@ -2,18 +2,18 @@
 
 // PHP version 7.x
 
-$country =  null;
+$country = null;
 $session = null;
 if ($session !== null) {
-  $user = $session->user;
+    $user = $session->user;
 
-  if ($user !== null) {
-    $address = $user->getAddress();
- 
-    if ($address !== null) {
-      $country = $address->country;
+    if ($user !== null) {
+        $address = $user->getAddress();
+
+        if ($address !== null) {
+            $country = $address->country;
+        }
     }
-  }
 }
 
 // PHP version 8.0

@@ -17,4 +17,3 @@ namespace Custom\JsonValidate {
     var_dump(\json_validate('{ "test": { "foo": "bar" } }')); // true
 
 }
-

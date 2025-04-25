@@ -15,15 +15,15 @@ $manyArgumentsFunction = manyArguments('yatharth',null, null, 'vataliya');
 
 */
 
-
 // PHP version 8.0
 
 $manyArgumentsFunction = manyArguments(first: 'yatharth', fourth: 'vataliya');
 
 var_dump($manyArgumentsFunction);
 
-function state(mixed ...$arguments){
-  var_dump($arguments);
+function state(mixed ...$arguments)
+{
+    var_dump($arguments);
 }
 
 state(name: 'yatharth', sirname: 'vataliya'); // This means giving named argument with function that contains

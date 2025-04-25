@@ -34,13 +34,15 @@ $t2->callClosure($closure->bindTo(new T1)); // This will throw error about priva
 class A
 {
     private $val;
-    function __construct($val)
+
+    public function __construct($val)
     {
         $this->val = $val;
     }
-    function getClosure()
+
+    public function getClosure()
     {
-        //returns closure bound to this object and scope
+        // returns closure bound to this object and scope
         return function () {
             return $this->val;
         };

@@ -1,6 +1,6 @@
 <?php
 
-# PHP 8.2
+// PHP 8.2
 
 trait Foo
 {
@@ -17,7 +17,7 @@ var_dump(Bar::CONSTANT); // 1
 
 /*
  *
- * You cannot access the constant through the name of the trait, 
+ * You cannot access the constant through the name of the trait,
  * but, you can access the constant through the class that uses the trait.
  *
  */

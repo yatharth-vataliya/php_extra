@@ -1,4 +1,5 @@
 <?php
+
 final class Singleton
 {
     private static $instance;
@@ -10,11 +11,11 @@ final class Singleton
 
     public static function getInstance(): Singleton
     {
-        if (is_null(static::$instance)) {
-            static::$instance = new Singleton();
+        if (is_null(self::$instance)) {
+            self::$instance = new Singleton;
         }
 
-        return static::$instance;
+        return self::$instance;
     }
 }
 
@@ -23,5 +24,3 @@ var_dump(Singleton::getInstance());
 
 var_dump(Singleton::getInstance());
 // object(Singleton)#1 (0) {}
-
-?>

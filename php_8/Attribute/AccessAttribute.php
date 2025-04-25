@@ -1,6 +1,6 @@
 <?php
 
-require "TryAttribute.php";
+require 'TryAttribute.php';
 
 $reflectionClass = new ReflectionClass(TryAttribute::class);
 

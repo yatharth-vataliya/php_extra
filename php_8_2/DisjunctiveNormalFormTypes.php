@@ -1,13 +1,9 @@
 <?php
 
-interface A
-{
-}
-interface B
-{
-}
+interface A {}
+interface B {}
 
-#PHP < 8.2
+// PHP < 8.2
 
 class Foo
 {
@@ -21,7 +17,7 @@ class Foo
     }
 }
 
-#PHP 8.2
+// PHP 8.2
 
 class Foo1
 {
@@ -33,8 +29,8 @@ class Foo1
 
 /*
  *
- * DNF types allow us to combine union and intersection types, 
- * following a strict rule: when combining union and intersection types, 
+ * DNF types allow us to combine union and intersection types,
+ * following a strict rule: when combining union and intersection types,
  * intersection types must be grouped with brackets.
- * 
+ *
  */

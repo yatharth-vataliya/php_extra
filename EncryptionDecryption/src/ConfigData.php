@@ -1,7 +1,12 @@
 <?php
+
 namespace Crypto;
-    class ConfigData{
-      public const CIPHER = 'aes-256-cbc';
-      public const KEY = 'YATHARTH';
-      public const IV = '©?û!Ðâ¤£Hy';
-    }
+
+class ConfigData
+{
+    public const CIPHER = 'aes-256-cbc';
+
+    public const KEY = 'YATHARTH';
+
+    public const IV = '©?û!Ðâ¤£Hy';
+}

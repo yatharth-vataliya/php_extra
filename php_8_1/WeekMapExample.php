@@ -5,12 +5,12 @@ class Solar
     public array $attributes = [
         'Solar Flare',
         'Magnetic Storms',
-        'Generate Heat'
+        'Generate Heat',
     ];
 
     public function __construct()
     {
-        echo self::class . " is executed \n";
+        echo self::class." is executed \n";
     }
 
     public function __destruct()
@@ -37,8 +37,8 @@ var_dump($solar2); // still you get value in this variable but expected to be em
 
 unset($solar2);*/
 
-$solarx = new Solar();
-$weekMap = new WeakMap();
+$solarx = new Solar;
+$weekMap = new WeakMap;
 
 $weekMap[$solarx] = ['this is solarx array first element', 'this is solarx second element'];
 

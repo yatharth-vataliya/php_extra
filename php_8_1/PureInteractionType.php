@@ -1,6 +1,6 @@
 <?php
 
-//PHP < 8.1
+// PHP < 8.1
 
 function countAndIterate(Iterator $value): void
 {
@@ -15,7 +15,7 @@ function countAndIterate(Iterator $value): void
     echo count($value);
 }
 
-//PHP 8.1
+// PHP 8.1
 
 function countAndIterate2(Iterator&Countable $value): void
 {
@@ -25,4 +25,3 @@ function countAndIterate2(Iterator&Countable $value): void
 
     echo count($value);
 }
-

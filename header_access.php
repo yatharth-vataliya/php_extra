@@ -19,7 +19,7 @@
 // }
 header('Access-Control-Allow-Origin: *');
 
- ?>
+?>
 <script type="text/javascript">
 console.log('yatharth');
 </script>

@@ -2,7 +2,7 @@
 
 function redirect(string $uri): never
 {
-    header('Location: ' . $uri);
+    header('Location: '.$uri);
     exit();
 }
 

@@ -55,7 +55,7 @@ switch (2) {
         echo ' 2 is printed';
     default:
         echo ' this is default statement';
-        break; //see the php manual for the numberic syntax
+        break; // see the php manual for the numberic syntax
 }
 
 echo "\n";

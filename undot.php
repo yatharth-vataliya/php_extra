@@ -6,7 +6,7 @@ function dataSet(&$target, string|array $dotString, $value, ?bool $overwrite = t
     $dotVarArray = is_array($dotString) ? $dotString : (explode('.', $dotString) ?? []);
     $firstPoint = array_shift($dotVarArray);
     if ($dotVarArray) {
-        if (!array_key_exists($firstPoint, $target)) {
+        if (! array_key_exists($firstPoint, $target)) {
             $target[$firstPoint] = [];
         }
         dataSet($target[$firstPoint], $dotVarArray, $value, $overwrite);
@@ -21,7 +21,7 @@ function dataGet(string $dotString, array $mixedArray): mixed
 
         $returnValue = null;
         foreach (explode('.', $dotString) as $dot) {
-            if (!array_key_exists($dot, $mixedArray)) {
+            if (! array_key_exists($dot, $mixedArray)) {
                 $returnValue = null;
                 break;
             }
@@ -30,6 +30,7 @@ function dataGet(string $dotString, array $mixedArray): mixed
 
         return $returnValue;
     }
+
     return null;
 }
 
@@ -43,10 +44,10 @@ var_dump(dataGet($dotString, $data ?? []));
 
 // both array declarations are identical
 $data['userinfo']['name']['first_name'] = 'Yatharth';
-$data = array(
+$data = [
     'userinfo' => [
         'name' => [
             'first_name' => 'Yatharth',
         ],
     ],
-);
+];

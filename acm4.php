@@ -1,34 +1,38 @@
 <?php
 
-require_once('acm3.php');
+require_once 'acm3.php';
 
 class MyClass2 extends MyClass
-
 {
-	public static $p1="nothing";
-	public static $p2="acb";
-	private static $p3="mon";
-	public function __construct()
-	{
+    public static $p1 = 'nothing';
 
-   	parent::__construct(self::$p1,self::$p2,self::$p3);
+    public static $p2 = 'acb';
 
-	}
-    public $pu = "haresh";
-    protected $pr = "ambrish";
-    private $pri= "chirag";
+    private static $p3 = 'mon';
 
-     function printHello1()
+    public function __construct()
     {
-        echo $this ->pu;
-        echo $this ->pr;
-        echo $this ->pri;
+
+        parent::__construct(self::$p1, self::$p2, self::$p3);
+
+    }
+
+    public $pu = 'haresh';
+
+    protected $pr = 'ambrish';
+
+    private $pri = 'chirag';
+
+    public function printHello1()
+    {
+        echo $this->pu;
+        echo $this->pr;
+        echo $this->pri;
     }
 }
 
-$obj2 = new MyClass2();
-$obj2 ->printHello1();
-echo "<pre>";
+$obj2 = new MyClass2;
+$obj2->printHello1();
+echo '<pre>';
 print_r($obj2);
-echo "<pre/>";
-?>
+echo '<pre/>';

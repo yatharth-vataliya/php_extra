@@ -2,7 +2,6 @@
 
 $t1 = microtime(true);
 
-
 for ($i = 0; $i < 10000000; $i++) {
     $file = fopen('time.txt', 'a+');
     fwrite($file, 'This is time test with file write');

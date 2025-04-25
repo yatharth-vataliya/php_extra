@@ -28,4 +28,3 @@ class Foo3 implements I3
 
 // Fatal error: Cannot use array as value for class constant
 // Foo::PHP of type string
-

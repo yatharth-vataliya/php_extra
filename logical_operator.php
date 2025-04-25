@@ -12,16 +12,14 @@ var_dump($f);
 
 echo "\n";
 
-$g = True && False;
+$g = true && false;
 
 var_dump($g);
 
 echo "\n";
 
-$h = True and False;
+$h = true and false;
 
 var_dump($h);
 
 echo "\n";
-
-?>

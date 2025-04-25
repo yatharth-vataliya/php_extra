@@ -1,5 +1,5 @@
-<?php 
-	
+<?php
+
 /*
 
 *
@@ -11,10 +11,10 @@
 */
 
 /*for($i=0;$i<5;$i++):
-	for($j=0;$j<=$i;$j++):
-		echo "*";
-	endfor;
-	echo "<br>";
+    for($j=0;$j<=$i;$j++):
+        echo "*";
+    endfor;
+    echo "<br>";
 endfor;*/
 
 /*
@@ -28,10 +28,10 @@ endfor;*/
 */
 
 /*for($i=4;$i>=0;$i--):
-	for($j=$i;$j>=0;$j--):
-		echo "*";
-	endfor;
-	echo "<br>";
+    for($j=$i;$j>=0;$j--):
+        echo "*";
+    endfor;
+    echo "<br>";
 endfor;*/
 
 /*
@@ -45,10 +45,10 @@ endfor;*/
 */
 /*
 for($i=0;$i<5;$i++){
-	for($j=0;$j<=5;$j++){
-		echo $i;
-	}
-	echo "<br>";
+    for($j=0;$j<=5;$j++){
+        echo $i;
+    }
+    echo "<br>";
 }*/
 
 /*
@@ -62,12 +62,11 @@ for($i=0;$i<5;$i++){
 */
 
 /*for($i=0;$i<5;$i++){
-	for($j=0;$j<=$i;$j++){
-		echo $i;
-	}
-	echo "<br>";
+    for($j=0;$j<=$i;$j++){
+        echo $i;
+    }
+    echo "<br>";
 }*/
-
 
 /*
 
@@ -79,11 +78,9 @@ for($i=0;$i<5;$i++){
 
 */
 
-for($i=0;$i<5;$i++){
-	for($j=0;$j<=$i;$j++){
-		echo $j;
-	}
-	echo "<br>";
+for ($i = 0; $i < 5; $i++) {
+    for ($j = 0; $j <= $i; $j++) {
+        echo $j;
+    }
+    echo '<br>';
 }
-
-?>

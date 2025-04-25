@@ -4,14 +4,17 @@
 
 use PHPUnit\Framework\TestCase;
 
-final class MyTest extends TestCase {
+final class MyTest extends TestCase
+{
     protected $logFile;
 
-    protected function setUp(): void {
+    protected function setUp(): void
+    {
         $this->logFile = fopen('/tmp/logfile', 'w');
     }
 
-    protected function taerDown(): void {
+    protected function taerDown(): void
+    {
         fclose($this->logFile);
         unlink('/tmp/logfile');
     }
@@ -22,16 +25,18 @@ final class MyTest extends TestCase {
 
 // IN PHP 8.3
 
-
-final class MyTest3 extends TestCase {
+final class MyTest3 extends TestCase
+{
     protected $logFile;
 
-    protected function setUp(): void {
+    protected function setUp(): void
+    {
         $this->logFile = fopen('/tmp/logfile', 'w');
     }
 
     #[\Override]
-    protected function taerDown(): void {
+    protected function taerDown(): void
+    {
         fclose($this->logFile);
         unlink('/tmp/logfile');
     }

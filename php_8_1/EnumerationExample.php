@@ -16,7 +16,7 @@ enum Suit : string {
 // enum can't extend any class and enum class can't be extended.
 // enum can implements any number of interfaces;
 
-//enum that contains values might have type declaration other wise it will throw exception
+// enum that contains values might have type declaration other wise it will throw exception
 
 enum Suit: string
 {
@@ -61,4 +61,3 @@ var_dump(Suit::Diamonds->from('Green'));
 var_dump(Suit::Diamonds->tryFrom('Nothing'));
 
 // var_dump(Suit::Diamonds->from('Nothing')); // This will give error
-
