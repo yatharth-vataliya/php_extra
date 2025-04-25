@@ -16,7 +16,7 @@ var_dump($arr); // this will work properly;
 
 $plus = ['name' => 'yatharth', 'city' => 'kalavad'];
 
-$plus = ['mobile' => 8758721807]; // this statement will reinitialize the the array with key: mobile and value: 8758721807;
+$plus = ['mobile' => 9876543211]; // this statement will reinitialize the the array with key: mobile and value: 8758721807;
 
 $plus = $plus + ['study' => 'mscit']; // but this will add element as key and value in the existing array;
 
